@@ -28,11 +28,11 @@ function App() {
     <>
       <NoteState>
         <Router>
-          <Navbar />
+          <Navbar/>
           <Alert alert={alert} />
           <div className="container">
           <Routes>
-            <Route exact path="/" element={<Home showAlert={showAlert} />}></Route>
+            <Route exact path="/iNoteBook" element={<Home showAlert={showAlert} />}></Route>
           {/* </Routes> */}
           {/* <Routes> */}
             <Route exact path="/about" element={<About />}></Route>

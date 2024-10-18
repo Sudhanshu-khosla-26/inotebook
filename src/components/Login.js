@@ -20,7 +20,7 @@ const Login = (props) => {
             //redirect
             localStorage.setItem("token", json.authtoken);
             props.showAlert("Logged in successfully", "success")
-            navigate("/");
+            navigate("/iNoteBook");
         }
         else{
             props.showAlert("Invalid credentials", "danger")
