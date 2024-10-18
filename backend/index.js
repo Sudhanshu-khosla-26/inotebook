@@ -9,7 +9,7 @@ const app = express()
 const port = 5000
 app.use(cors(
   {
-    origin: ["https://inotebook-a4pj.vercel.app"],
+    origin: ["https://inotebook-lyart.vercel.app"],
     methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
     credentials: true
   }
