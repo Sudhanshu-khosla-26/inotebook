@@ -10,7 +10,7 @@ const port = 5000
 app.use(cors(
   {
     origin: ["https://inotebook-a4pj.vercel.app"],
-    methods: ["POST", "GET", "DELETE", "PATCH"],
+    methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
     credentials: true
   }
 ))
