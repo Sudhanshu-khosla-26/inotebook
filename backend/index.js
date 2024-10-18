@@ -7,13 +7,14 @@ connecToMongo();
 
 const app = express()
 const port = 5000
-app.use(cors(
-  {
-    origin: [""],
-    methods: ["POST", "GET", "DELETE", "PATCH", "PUT"],
-    credentials: true
-  }
-))
+
+const corsOptions = {
+  origin: 'https://inotebook-lyart.vercel.app', // Allow only requests from this origin
+  methods: 'GET,POST,PATCH,PUT,DELETE', // Allow only these methods
+  allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
+};
+
+app.use(cors(corsOptions))
 app.use(express.json())
 
 app.get("/", (req , res) => {
