@@ -8,13 +8,19 @@ connecToMongo();
 const app = express()
 const port = 5000
 
-const corsOptions = {
-  origin: 'https://inotebook-af5j.vercel.app', // Allow only requests from this origin
-  methods: 'GET,POST,PATCH,PUT,DELETE', // Allow only these methods
-  allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
-};
+// const corsOptions = {
+//   origin: 'https://inotebook-af5j.vercel.app', // Allow only requests from this origin
+//   methods: 'GET,POST,PATCH,PUT,DELETE', // Allow only these methods
+//   allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
+// };
 
-app.use(cors(corsOptions))
+app.use(cors(
+  {
+    origin: ['https://inotebook-af5j.vercel.app'],
+    methods: ['GET','POST','PATCH','PUT','DELETE'],
+    credentials: true,
+  }
+))
 app.use(express.json())
 
 app.get("/", (req , res) => {
