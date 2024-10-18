@@ -9,7 +9,7 @@ const app = express()
 const port = 5000
 
 const corsOptions = {
-  origin: 'https://inotebook-lyart.vercel.app', // Allow only requests from this origin
+  origin: 'https://inotebook-af5j.vercel.app', // Allow only requests from this origin
   methods: 'GET,POST,PATCH,PUT,DELETE', // Allow only these methods
   allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
 };
